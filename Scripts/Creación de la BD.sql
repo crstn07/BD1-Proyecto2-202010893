@@ -1,8 +1,3 @@
--- Generado por Oracle SQL Developer Data Modeler 23.1.0.087.0806
---   en:        2023-10-27 13:27:34 CST
---   sitio:      DB2/UDB 9
---   tipo:      DB2/UDB 9
-
 CREATE SCHEMA bd1_proyecto2 DEFAULT CHARACTER SET utf8 COLLATE utf8_spanish_ci;
 
 USE bd1_proyecto2;
@@ -138,7 +133,7 @@ ALTER TABLE Estudiantes ADD CONSTRAINT Estudiante_PK PRIMARY KEY (Carnet)
 ALTER TABLE Estudiantes ADD CONSTRAINT Estudiante_DPI_UN UNIQUE (DPI)
 ;
 
-CREATE TABLE Horario 
+CREATE TABLE Horarios 
     (
      Dia TINYINT NOT NULL , 
      Horario VARCHAR (11) NOT NULL , 
@@ -146,7 +141,7 @@ CREATE TABLE Horario
     )
 ;
 
-ALTER TABLE Horario ADD CONSTRAINT Horario_PK PRIMARY KEY (Curso_Habilitado_ID, 
+ALTER TABLE Horarios ADD CONSTRAINT Horarios_PK PRIMARY KEY (Curso_Habilitado_ID, 
     Horario, 
     Dia)
 ;
@@ -273,8 +268,8 @@ ALTER TABLE Estudiantes
     )
 ;
 
-ALTER TABLE Horario 
-    ADD CONSTRAINT Horario_Curso_Habilitado_FK FOREIGN KEY
+ALTER TABLE Horarios 
+    ADD CONSTRAINT Horarios_Curso_Habilitado_FK FOREIGN KEY
     ( 
      Curso_Habilitado_ID
     ) 
